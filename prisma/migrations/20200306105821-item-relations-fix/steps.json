@@ -1,0 +1,83 @@
+{
+  "version": "0.3.14-fixed",
+  "steps": [
+    {
+      "tag": "DeleteModel",
+      "model": "BuildComponents"
+    },
+    {
+      "tag": "CreateField",
+      "model": "Item",
+      "field": "builtInto",
+      "type": "Item",
+      "arity": "List"
+    },
+    {
+      "tag": "CreateDirective",
+      "location": {
+        "path": {
+          "tag": "Field",
+          "model": "Item",
+          "field": "builtInto"
+        },
+        "directive": "relation"
+      }
+    },
+    {
+      "tag": "CreateArgument",
+      "location": {
+        "tag": "Directive",
+        "path": {
+          "tag": "Field",
+          "model": "Item",
+          "field": "builtInto"
+        },
+        "directive": "relation"
+      },
+      "argument": "name",
+      "value": "\"builtInto\""
+    },
+    {
+      "tag": "CreateField",
+      "model": "Item",
+      "field": "builtFrom",
+      "type": "Item",
+      "arity": "List"
+    },
+    {
+      "tag": "CreateDirective",
+      "location": {
+        "path": {
+          "tag": "Field",
+          "model": "Item",
+          "field": "builtFrom"
+        },
+        "directive": "relation"
+      }
+    },
+    {
+      "tag": "CreateArgument",
+      "location": {
+        "tag": "Directive",
+        "path": {
+          "tag": "Field",
+          "model": "Item",
+          "field": "builtFrom"
+        },
+        "directive": "relation"
+      },
+      "argument": "name",
+      "value": "\"builtInto\""
+    },
+    {
+      "tag": "DeleteField",
+      "model": "Item",
+      "field": "BuildComponents_ItemTo_BuildComponents_A"
+    },
+    {
+      "tag": "DeleteField",
+      "model": "Item",
+      "field": "BuildComponents_ItemTo_BuildComponents_B"
+    }
+  ]
+}

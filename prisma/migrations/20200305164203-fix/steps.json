@@ -1,0 +1,22 @@
+{
+  "version": "0.3.14-fixed",
+  "steps": [
+    {
+      "tag": "CreateField",
+      "model": "Team",
+      "field": "bans",
+      "type": "Champion",
+      "arity": "List"
+    },
+    {
+      "tag": "DeleteField",
+      "model": "Team",
+      "field": "champion"
+    },
+    {
+      "tag": "DeleteField",
+      "model": "Team",
+      "field": "participants"
+    }
+  ]
+}

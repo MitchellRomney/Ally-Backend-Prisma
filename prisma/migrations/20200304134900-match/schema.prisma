@@ -1,0 +1,36 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url = "***"
+}
+
+model Summoner {
+  accountId     String @default("")
+  allyId        String @default("") @unique
+  allyName      String @default("") @unique
+  id            Int    @default(autoincrement()) @id
+  profileIconId Int    @default(0)
+  puuid         String @default("")
+  server        String @default("")
+  summonerId    String @default("")
+  summonerLevel Int    @default(0)
+  summonerName  String @default("")
+  user          User?
+}
+
+model User {
+  email    String     @default("") @unique
+  isAdmin  Boolean    @default(false)
+  password String     @default("")
+  userId   Int        @default(autoincrement()) @id
+  username String?    @unique
+  summoners Summoner[]
+}
+
+model Match {
+  id Int @default(autoincrement()) @id
+  gameId Int
+}
