@@ -343,22 +343,31 @@ type ParticipantFrame {
   xp: Int!
 }
 
+type PlatformStatistics {
+  latestVersion: String!
+  totalMatches: Int!
+  totalSummoners: Int!
+  totalUsers: Int!
+}
+
 type Query {
   allChampions: [Champion!]
   allSummoners: [Summoner!]
-  getQuickStats(server: String!, summonerName: String!): [QuickStat!]
+  getQuickStats(accountId: String!, server: String!, summonerId: String!): [QuickStat!]
   getSummonerParticipants(accountId: String!, amount: Int, server: String!, summonerId: String!): [Participant!]!
+  getSummonerProfile(server: String!, summonerName: String!): SummonerProfile
   me: User
-  summoner(server: String!, summonerName: String!): Summoner
+  platformStatistics: PlatformStatistics
+  summoner(server: String!, summonerId: String, summonerName: String!): Summoner
 }
 
 type QuickStat {
-  growth: Int!
+  growth: String!
   icon: String!
   significant: Boolean!
   suffix: String!
   title: String!
-  value: Int!
+  value: String!
 }
 
 type Rune {
@@ -391,6 +400,12 @@ type Summoner {
   summonerLevel: Int!
   summonerName: String!
   user: User
+}
+
+type SummonerProfile {
+  matches: [Participant!]
+  quickStats: [QuickStat!]
+  summoner: Summoner
 }
 
 type SummonerSpell {

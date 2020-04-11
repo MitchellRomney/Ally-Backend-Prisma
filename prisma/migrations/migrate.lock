@@ -1,19 +1,8 @@
 # IF THERE'S A GIT CONFLICT IN THIS FILE, DON'T SOLVE IT MANUALLY!
-# INSTEAD EXECUTE `prisma2 migrate fix`
+# INSTEAD EXECUTE `prisma migrate fix`
 # Prisma Migrate lockfile v1
 # Read more about conflict resolution here: TODO
 
-20200302121029-init
-20200304134900-match
-20200304191600-static-league-data
-20200305151553-summoner-composite-unique-restraint
-20200305152950-summoner-id-server-constraint
-20200305153402-constraint-tidy-up
-20200305155405-fix-plural-relation-fields
-20200305164203-fix
-20200305164348-fix
-20200306105821-item-relations-fix
-20200306111752-team-and-participant-composite-unique-constaints
-20200306124539-add-champion-unique-fields
-20200306150257-remove-team-relation-on-participant
-20200309185925-champion-tags
+20200408150722-initial
+20200410184016
+20200412090317

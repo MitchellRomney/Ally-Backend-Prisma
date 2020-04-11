@@ -1,0 +1,53 @@
+{
+  "version": "0.3.14-fixed",
+  "steps": [
+    {
+      "tag": "UpdateField",
+      "model": "SummonerSpell",
+      "field": "participantSpell1",
+      "arity": "List"
+    },
+    {
+      "tag": "UpdateField",
+      "model": "SummonerSpell",
+      "field": "participantSpell2",
+      "arity": "List"
+    },
+    {
+      "tag": "UpdateField",
+      "model": "Rune",
+      "field": "participantPerk0",
+      "arity": "List"
+    },
+    {
+      "tag": "UpdateField",
+      "model": "Rune",
+      "field": "participantPerk1",
+      "arity": "List"
+    },
+    {
+      "tag": "UpdateField",
+      "model": "Rune",
+      "field": "participantPerk2",
+      "arity": "List"
+    },
+    {
+      "tag": "UpdateField",
+      "model": "Rune",
+      "field": "participantPerk3",
+      "arity": "List"
+    },
+    {
+      "tag": "UpdateField",
+      "model": "Rune",
+      "field": "participantPerk4",
+      "arity": "List"
+    },
+    {
+      "tag": "UpdateField",
+      "model": "Rune",
+      "field": "participantPerk5",
+      "arity": "List"
+    }
+  ]
+}

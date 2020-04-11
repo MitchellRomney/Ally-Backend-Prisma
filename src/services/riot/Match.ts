@@ -1,4 +1,4 @@
-import { riotClient } from "./Axios"
+import { RiotRequestHandler } from "./Client"
 
 export async function getMatchList(accountId: string, server: string, amount: number) {
   let endpoint = `https://${server}.api.riotgames.com/lol/match/v4/matchlists/by-account/${accountId}`
@@ -7,10 +7,11 @@ export async function getMatchList(accountId: string, server: string, amount: nu
     endpoint += `?endIndex=${amount}`
   }
 
-  return riotClient.get(endpoint)
+  return RiotRequestHandler(endpoint, 'match-matchlists')
 }
 
-export function getMatch(gameId: number, server: string) {
+export async function getMatch(gameId: number, server: string) {
   let endpoint = `https://${server}.api.riotgames.com/lol/match/v4/matches/${gameId}`
-  return riotClient.get(endpoint)
+
+  return RiotRequestHandler(endpoint, 'match-matches')
 }

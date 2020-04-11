@@ -1,2 +1,0 @@
-import { subscriptionField } from "nexus";
-

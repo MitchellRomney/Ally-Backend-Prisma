@@ -4,7 +4,7 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = "postgresql://mitchellromney:mitchellromney@localhost:5432/ally-gg"
+  url = "***"
 }
 
 model User {
@@ -331,22 +331,22 @@ model Participant {
   perk1Var1                       Int      @default(0)
   perk1Var2                       Int      @default(0)
   perk1Var3                       Int      @default(0)
-  perk2                           Rune?    @relation("ParticipantPerk2", fields: [perk2Id], references: [runeId])
+  perk2                           Rune?     @relation("ParticipantPerk2", fields: [perk2Id], references: [runeId])
   perk2Id                         Int?
   perk2Var1                       Int      @default(0)
   perk2Var2                       Int      @default(0)
   perk2Var3                       Int      @default(0)
-  perk3                           Rune?    @relation("ParticipantPerk3", fields: [perk3Id], references: [runeId])
+  perk3                           Rune?     @relation("ParticipantPerk3", fields: [perk3Id], references: [runeId])
   perk3Id                         Int?
   perk3Var1                       Int      @default(0)
   perk3Var2                       Int      @default(0)
   perk3Var3                       Int      @default(0)
-  perk4                           Rune?    @relation("ParticipantPerk4", fields: [perk4Id], references: [runeId])
+  perk4                           Rune?     @relation("ParticipantPerk4", fields: [perk4Id], references: [runeId])
   perk4Id                         Int?
   perk4Var1                       Int      @default(0)
   perk4Var2                       Int      @default(0)
   perk4Var3                       Int      @default(0)
-  perk5                           Rune?    @relation("ParticipantPerk5", fields: [perk5Id], references: [runeId])
+  perk5                           Rune?     @relation("ParticipantPerk5", fields: [perk5Id], references: [runeId])
   perk5Id                         Int?
   perk5Var1                       Int      @default(0)
   perk5Var2                       Int      @default(0)
