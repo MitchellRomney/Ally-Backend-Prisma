@@ -1,10 +1,14 @@
 import { server } from 'nexus'
+import { use } from 'nexus'
+import { prisma } from 'nexus-plugin-prisma'
 
 const session = require('express-session');
 const redis = require('redis');
 export const redisClient = redis.createClient();
 const redisStore = require('connect-redis')(session);
 const Arena = require('bull-arena')
+
+use(prisma())
 
 server.express.use(
   session({
